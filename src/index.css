@@ -1,13 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 1077px;
+  margin: 23px 0px;
+  gap: 16px;
+}
+
+table{
+  max-width: 1077px;
+  flex-grow: 1;
+  margin: 0px;
+}
+
+.search{
+  display: flex;
+  max-width: 570px;
+  background-color: #5A5C66;
+  padding: 16px 26px;
+  cursor: pointer;
+}
+
+input[type=text]{
+  background-color: #5A5C66;
+  flex-grow: 1;
+  margin: 0px;
+  font-size: 0.875rem;
+  border: none;
+  color: #B2B7BF;
+  outline: none;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+tr {
+  display: flex;
+  flex-grow: 1 ;
+  margin: 0px;
+  flex-direction: row;
+}
+
+th{
+  background-color: #474955;
+  display: flex;
+  flex: auto;
+  padding: 20px 12px;
+  font-size: 0.875rem;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 500;
+  border: solid 1px #474955;
+}
+
+th > div{
+  display: flex;
+  margin: auto;
+  gap: 34px;
+}
+
+td{
+  padding: 11px 12px;
+  font-size: 0.813rem;
+  border: solid 1px #E3E6EC;
+  display: flex;
+  flex: auto;
+}
+
+.id{
+  max-width: 86px;
+  flex-grow: 1;
+  display: flex;
+}
+
+td > span{
+  margin: auto;
+}
+
+.title{
+  max-width: 513px;
+  flex-grow: 1;
+  display: flex;
+  padding: 0px 8px;
+}
+
+.body{
+  max-width: 409px;
+  flex-grow: 1;
+  line-height: 1.125rem;
+}
+
+.pagination{
+  display: flex;
+  max-width: 1077px;
+  flex-grow: 1;
+  margin: 0px;
+  justify-content: space-between;
+}
+
+.pagination > button{
+  font-size: 1.5rem;
+  font-family: Roboto;
+  background-color: transparent;
+  border: none;
+  padding: 0px 41px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #474955;
+}
+
+.pagination > button:disabled{
+  color: #a9a9ac;
+}
+
+.pagination-pages > button{
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.125rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width:1100px){
+  .container{
+    width: 700px;
+  }
+
+  th > div {
+    gap: 7px;
+  }
+
+  th > div > img{
+    max-width: 8px;
+  }
+
+  .id{
+    max-width: 34px;
+  }
+
+  .title{
+    max-width: 282px;
+  }
+
+  .body{
+    max-width: 314px;
+  }
+}
+
+@media screen and (max-width:710px){
+  .container{
+    width: 400px;
+  }
+
+  th{
+    font-size: 0.75rem;
+    padding: 10px 6px;
+  }
+
+  td{
+    font-size: 0.675rem;
+    padding: 10px 6px;
+  }
+
+  .id{
+    max-width: 26px;
+  }
+
+  .title{
+    max-width: 150px;
+    padding: 0px 4px;
+  }
+
+  .body{
+    max-width: 186px;
+  }
+
+  .pagination > button{
+    font-size: 1rem;
+    padding: 0px 10px;
+  }
+
+  .pagination-pages > button{
+    font-size: 0.675rem;
+  }
+}
+
+@media screen and (max-width:420px){
+  .container{
+    width: 300px;
+  }
+
+  .id{
+    max-width: 16px;
+  }
+
+  .title{
+    max-width: 105px;
+  }
+
+  .body{
+    max-width: 141px;
+  }
+
+  .pagination > button{
+    font-size: 0.675rem;
+  }
 }
